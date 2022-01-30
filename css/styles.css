@@ -93,9 +93,16 @@ button {
   align-items: center;
 }
 
+.right-half-content {
+  width: 100%;
+}
+
+.right-half-content > p {
+  width: min(75ch, 70%);
+}
+
 .right-half-content > *:not(form) {
   margin-left: min(32px, 5vw);
-  margin-right: min(64px, 10vw);
 }
 
 .right-half-content > * {
@@ -116,6 +123,7 @@ button {
 }
 .form-elements {
   display: grid;
+  width: min(750px, 70%);
   gap: min(16px, 4vw);
   grid-template-columns: repeat(2, 1fr);
 }
