@@ -9,7 +9,7 @@
 
 :root {
   --light-grey: #e5e7eb;
-  --warning-text: #ff5555;
+  --warning-text: #dd4141;
   --valid-color: #b0e7a0;
 }
 
@@ -151,7 +151,7 @@ button {
   grid-column: 1;
 }
 
-.form-input + .form-warning {
+.form-warning {
   color: var(--warning-text);
   margin-top: max(4px, 0.6vh);
   margin-bottom: max(4px, 0.6vh);
@@ -172,12 +172,8 @@ button {
   font-weight: bold;
 }
 
-.form-input:invalid:not(.form-input:placeholder-shown) {
-  background: var(--warning-text);
-}
-
-.form-input:valid:not(.form-input:placeholder-shown) {
-}
-
-.form-input:focus {
+.form-input:valid + label::after {
+  content: '  valid';
+  color: green;
+  font-weight: bold;
 }
