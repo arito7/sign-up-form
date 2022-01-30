@@ -9,6 +9,8 @@
 
 :root {
   --light-grey: #e5e7eb;
+  --warning-text: #ff5555;
+  --valid-color: #b0e7a0;
 }
 
 * {
@@ -35,6 +37,10 @@ input {
   padding: 0;
   border-radius: 4px;
   border: 1px solid var(--light-grey);
+}
+
+button {
+  cursor: pointer;
 }
 .container {
   display: flex;
@@ -102,17 +108,19 @@ input {
   padding-top: min(5vh, 32px);
   padding-left: min(32px, 5vw);
   padding-bottom: min(5vh, 32px);
+  padding-right: max(auto, 8px);
 }
 
 .signup-form > .form-title {
   margin-bottom: 1rem;
 }
-.signup-form > .form-elements {
+.form-elements {
   display: grid;
+  gap: min(16px, 4vw);
   grid-template-columns: repeat(2, 1fr);
 }
 
-.signup-form > .form-elements > .form-element {
+.form-elements > .form-element {
   position: relative;
   margin-top: max(16px, 3vh);
 }
@@ -127,10 +135,24 @@ input {
 
 .signup-form > .form-elements > .form-element > input {
   font-size: 1.1rem;
+  height: max(16px, 2.5rem);
+  padding: 0.8rem;
 }
 
 .form-elements > .form-element:nth-child(odd) {
   grid-column: 1;
+}
+
+.form-input + .form-warning {
+  color: var(--warning-text);
+  margin-top: max(4px, 0.6vh);
+  margin-bottom: max(4px, 0.6vh);
+  white-space: pre-wrap;
+  display: none;
+}
+
+.form-warning.active {
+  display: block;
 }
 
 .right-half-content > button {
@@ -140,4 +162,14 @@ input {
   border: none;
   border-radius: 4px;
   font-weight: bold;
+}
+
+.form-input:invalid:not(.form-input:placeholder-shown) {
+  background: var(--warning-text);
+}
+
+.form-input:valid:not(.form-input:placeholder-shown) {
+}
+
+.form-input:focus {
 }
