@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-half">
+        <div class="banner">
+          <img class="banner-img" src="./imgs/odin-lined.png" alt="Odin Logo" />
+          <span>ODIN</span>
+        </div>
+        <a href="https://unsplash.com/photos/25xggax4bSA"
+          >Photo by Halie West on Unsplash</a
+        >
+      </div>
+      <div class="right-half">
+        <div class="right-half-content">
+          <p>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. Sign up
+            <em>now</em> to get started.
+          </p>
+
+          <h4>You <em>know</em> you want to.</h4>
+
+          <form id="signup-form" class="signup-form" action="">
+            <h3 class="form-title">Let's do this!</h3>
+
+            <ul class="form-elements">
+              <li class="form-element">
+                <label for="first-name">First Name</label>
+                <input
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  inputmode="latin-name"
+                  required
+                />
+              </li>
+
+              <li class="form-element">
+                <label for="last-name">Last Name</label>
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  inputmode="latin-name"
+                  required
+                />
+              </li>
+
+              <li class="form-element">
+                <label for="email">EMail</label>
+                <input type="email" name="email" id="email" required />
+              </li>
+
+              <li class="form-element">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  inputmode="tel"
+                  required
+                />
+              </li>
+
+              <li class="form-element">
+                <label for="pwd1">Password</label>
+                <input type="password" name="pwd1" id="pwd1" required />
+              </li>
+
+              <li class="form-element">
+                <label for="pwd2">Confirm Password</label>
+                <input type="password" name="pwd2" id="pwd2" required />
+              </li>
+            </ul>
+          </form>
+          <button form="signup-form">Create Account</button>
+          <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+@font-face {
+  font-family: norse;
+  src: url(../fonts/Norse-Bold.otf);
+}
+@font-face {
+  font-family: ubuntu;
+  src: url(../fonts/Ubuntu-Regular.ttf);
+}
+
+:root {
+  --light-grey: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  height: 100vh;
+  font-family: ubuntu, 'Courier New', Courier, monospace;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
+  border: 1px solid var(--light-grey);
+}
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.left-half {
+  position: relative;
+  width: min(30vw, 30%);
+  background-image: url(../imgs/bgleaf.avif);
+  background-size: cover;
+}
+
+.left-half > .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: max(15vh, 50%);
+  height: min(15vh, 300px);
+  color: white;
+  font-family: norse, 'Courier New', Courier, monospace;
+  background-color: #2228;
+}
+
+.banner > .banner-img {
+  height: inherit;
+  padding: 16px 0 16px 0;
+}
+
+.banner > span {
+  font-size: 5rem;
+}
+
+.left-half > a {
+  width: 100%;
+  margin-bottom: 1rem;
+  position: absolute;
+  font-size: 0.7rem;
+  bottom: 0;
+  text-align: center;
+  color: #fff;
+}
+
+/* RIGHT HALF */
+
+.right-half {
+  flex: 1;
+  width: max(70vw, 100%);
+  display: flex;
+  align-items: center;
+}
+
+.right-half-content > *:not(form) {
+  margin-left: min(32px, 5vw);
+  margin-right: min(64px, 10vw);
+}
+
+.right-half-content > * {
+  margin-bottom: min(32px, 5vh);
+}
+
+.signup-form {
+  background-color: #fff;
+  box-shadow: 0 1px 3px 1px #ddddddee;
+  padding-top: min(5vh, 32px);
+  padding-left: min(32px, 5vw);
+  padding-bottom: min(5vh, 32px);
+}
+
+.signup-form > .form-title {
+  margin-bottom: 1rem;
+}
+.signup-form > .form-elements {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.signup-form > .form-elements > .form-element {
+  position: relative;
+  margin-top: max(16px, 3vh);
+}
+
+.signup-form > .form-elements > .form-element > label {
+  position: absolute;
+  text-transform: uppercase;
+  top: -1rem;
+  font-size: 0.7rem;
+  left: 0;
+}
+
+.signup-form > .form-elements > .form-element > input {
+  font-size: 1.1rem;
+}
+
+.form-elements > .form-element:nth-child(odd) {
+  grid-column: 1;
+}
+
+.right-half-content > button {
+  background-color: #596d48;
+  color: #fff;
+  padding: 8px 32px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
